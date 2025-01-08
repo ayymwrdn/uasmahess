@@ -1,0 +1,373 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "poppins", sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin-inline: auto;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(../Uas/image/bgisi.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navigation {
+    width: 100%;
+    padding: 10px 0 10px 0;
+}
+
+.navigation .box-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation .box-navigation .box:nth-child(1) h1 {
+    font-size: 38px;
+    color: white;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul {
+    display: flex;
+    flex-direction: row;
+}
+.navigation .box-navigation .box:nth-child(2) ul li {
+    list-style-type: none;
+    margin-left: 40px;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul li a {
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul li a:hover {
+    color: peru;
+}
+
+.navigation .box-navigation .box:nth-child(3) {
+    display: none;
+}
+
+.navigation .box-navigation .box:nth-child(2) ul li i {
+    display: none;
+}
+
+/*hero style*/
+header .hero{
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+header .hero h1{
+    color: rgba(255, 255, 255, 0.832);
+    font-size: 46px;
+    text-align: center;
+}
+
+/*Profil style*/
+.Profil {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.Profil .box-Profil{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.Profil .box-Profil .box:nth-child(1) {
+    padding-right: 20px;
+}
+
+.Profil .box-Profil .box:nth-child(1) h1 {
+    font-size: 40px;
+    margin-bottom: 8px;
+} 
+
+.Profil .box-Profil .box:nth-child(1) p {
+    line-height: 1.8;
+}
+
+.Profil .box-Profil .box:nth-child(2) img{
+    border-radius: 10px;
+    width: 300px;
+}
+
+@media screen and (max-width: 200px) {
+    .Profil .box-Profil .box:nth-child(2) img {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .navigation .box-navigation .box:nth-child(2) {
+        display: flex;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        background-color: #fff;
+        width: 260px;
+        border-radius: 10px;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+
+    .navigation .box-navigation .menu-navigation.menu-active{
+        opacity: 1;
+        top: 100px;
+    }
+
+    .navigation .box-navigation .box:nth-child(2) ul {
+        flex-direction: column;
+    }
+
+    .navigation .box-navigation .box:nth-child(2) ul li {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .navigation .box-navigation .box:nth-child(2) ul li i {
+        margin-inline: 10px;
+        font-size: 24px;
+    }
+
+    .navigation .box-navigation .box:nth-child(2) ul li a {
+        color: black;
+    }
+
+    .navigation .box-navigation .box:nth-child(3) {
+        display: flex;
+        align-items: center;
+    }
+    .navigation .box-navigation .box:nth-child(3) i {
+        font-size: 28px;
+    }
+}
+
+header .hero h1{
+    font-size: 34px;
+}
+
+.Profil .box-Profil {
+    flex-direction: column-reverse;
+} 
+
+.Profil .box-Profil .box:nth-child(1) {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+@media screen and (max-width:546px) {
+    header .hero h1{
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 354px) {
+    header .hero h1{
+        font-size: 28px;
+    }
+}
+.koleksi h1{
+     display: flex;
+    flex-direction: column; /* Menempatkan elemen secara vertikal */
+    justify-content: center; /* Memusatkan secara vertikal */
+    align-items: center; /* Memusatkan secara horizontal */
+    text-align: center; /* Memastikan teks terpusat */
+    height: 100%; /* Agar tinggi elemen box sesuai dengan tinggi kontainer induk */
+    color: black;
+}
+
+.container-koleksi {
+    display: grid; /* Mengaktifkan Flexbox */
+    flex-wrap: wrap; /* Memungkinkan elemen-elemen untuk membungkus ke baris berikutnya jika ruang terbatas */
+    gap: 20px; /* Memberikan jarak antar item */
+    justify-content: flex-start; /* Menyusun item mulai dari kiri */
+    overflow: auto;
+}
+
+.koleksi-item {
+    display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            background-color: #1c1c1c;
+            
+            background-color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+
+}
+
+.koleksi-item img {
+    width: 80%; /* Membuat gambar lebih kecil (80% dari lebar card) */
+    height: auto; /* Menjaga aspek rasio gambar */
+    border-radius: 8px; /* Memberikan sudut yang lebih halus */
+    margin-bottom: 12px; /* Memberikan jarak yang cukup antara gambar dan teks */
+    object-fit: cover; /* Memastikan gambar mengisi ruang dengan baik */
+}
+
+.koleksi-item strong {
+    font-size: 1rem; /* Mengurangi ukuran teks menjadi lebih kecil dan proporsional */
+    line-height: 1.4; /* Memberikan jarak antar baris teks agar lebih rapi */
+    display: block; /* Agar teks berada di bawah gambar */
+    margin-top: 5px; /* Memberikan jarak antara gambar dan teks */
+    
+}
+
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 600px) {
+    .koleksi-item {
+        max-width: 100%; /* Card akan mengisi lebar kontainer pada layar kecil */
+        padding: 15px; /* Mengurangi padding pada card agar lebih efisien di ruang kecil */
+    }
+
+    .koleksi-item img {
+        width: 100%; /* Gambar akan mengisi seluruh lebar card pada layar kecil */
+    }
+
+    .koleksi-item strong {
+        font-size: 1rem; /* Ukuran font tetap konsisten */
+    }
+}
+
+
+
+footer p {
+    text-align: center;
+    padding:10px 20px 0;
+    background-color: #333;
+    color: white;
+}
+
+/* Reset beberapa styling default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Mengatur font umum di seluruh halaman */
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Styling untuk elemen <main> */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Styling untuk kontainer form */
+.content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Styling untuk judul */
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Styling untuk label */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+/* Styling untuk input */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #333;
+    outline: none;
+}
+
+/* Styling untuk tombol submit */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #333;
+}
+
+/* Styling untuk pesan error */
+#error-message {
+    margin-top: 15px;
+    font-size: 14px;
+    color: red;
+    text-align: center;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 600px) {
+    .content {
+        padding: 15px;
+        width: 100%;
+    }
+}
+
+
+
+
+

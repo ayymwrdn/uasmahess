@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Uas/stylebr.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+<title>Halaman Perpustakaan</title>
+</head>
+<body id="Home">
+    <header>
+        <!--navigation-->
+    <section class="navigation">
+      <div class="container">
+     <div class="box-navigation">
+      <div class="box">
+        <h1>Perpustakaan</h1>
+      </div>
+        <div class="box menu-navigation">
+            <ul>
+                <li><a href="#Home">Beranda</a></li>
+                <li><a href="#Profil">Profil</a></li>
+                <li><a href="#Transaksi">Transaksi</a></li>
+            </ul>
+        </div>
+        <div class="box menu-bar">
+            <i class="ri-menu-3-fill" style="color: white;"></i>
+        </div>
+        </div>
+     </div>
+    </section>
+    <!--navigation-->
+
+    <!--hero-->
+    <section class="hero">
+        <h1>Selamat Datang Di Perpustakaan Kami</h1>
+    </section>
+    <!--hero-->
+    </header>
+
+    <!--Profil-->
+    <section class="Profil" id="Profil">
+        <div class="container">
+            <div class="box-Profil">
+                <div class="box">
+                    <h1>Profil</h1>
+                <p>
+                  Perpustakaan merupakan salah satu sumber pengetahuan dalam mendukung pencapaian belajar mahasiswa dan siswi yang berkualitas. Sebagai sumber belajar keberadaan perpustakaan sangat di butuhkan para pendidik dan tenaga kependidikan untuk memperluas dan memperdalam pengetahuannya.
+                </p>
+            </div>
+            <div class="box">
+                <img src="../Uas/image/bgprf.jpg" alt=" ">
+            </div>
+        </div>
+        </div>
+    </section>
+    <!--Profil-->
+
+    <!--koleksi-->
+    <h1>koleksi buku</h1>
+    <section class="koleksi-item" id="Koleksi">
+        <div class="koleksi-item">
+            <img src="../Uas/image/novel1.jpg" alt=" tentang novel">
+            <p>Kategori: FIKSI</p>
+            <p> Harry Potter adalah sebuah film seri yang berdasarkan pada novel karya J.K.Rowling</p>
+        </div>
+        <div class="koleksi-item">
+            <img src="../Uas/image/tarzan.jpg" alt=" tentang novel">
+            <p>Kategori: FIKSI</p>
+            <p> Tarzan merupakan anak bangsawan inggris yang ditinggalkan di afrika oleh pemberontakan dan dibesarkan oleh kera</p>
+        </div>
+        <div class="koleksi-item">
+            <img src="../Uas/image/onepeace.jpg" alt=" tentang novel">
+            <p>Kategori: ANIME</p>
+            <p> Petualangan Monkey D Luffy buat jadi raja bajak laut dari menaklukan harta karun besar</p>
+        </div>
+        <div class="koleksi-item">
+            <img src="../Uas/image/naruto.jpg" alt=" tentang novel">
+            <p>Kategori: ANIME</p>
+            <p> vNaruto Uzumaki adalah karakter utama dalam anime naruto. Naruto adalah ninja muda yang bercita cita menjadi hokagE</p>
+        </div>
+
+        </div>
+    </section>
+    <!--koleksi-->
+
+    <!--Transaksi-->
+    <main>
+        <section class="content" id="Transaksi">
+            <h1>Transaksi Peminjaman Buku</h1>
+            <form id="formTransaksi" action="#" method="post" onsubmit="return validateForm()">
+                <label for="namaTransaksi">Nama Transaksi:</label>
+                <input type="text" id="namaTransaksi" name="namaTransaksi" required>
+    
+                <label for="jumlah">Jumlah Buku:</label>
+                <input type="number" id="jumlah" name="jumlah" required>
+    
+                <label for="kategori">Kategori Buku:</label>
+                <input type="text" id="kategori" name="kategori" required>
+    
+                <button type="submit">Simpan</button>
+            </form>
+            <p id="error-message" style="color: red; display: none;">Semua kolom harus diisi dengan benar.</p>
+    
+            <div class="table-container">
+                <table id="transactionTable">
+                    <thead>
+                        <tr>
+                            <th>Nama Transaksi</th>
+                            <th>Jumlah Buku</th>
+                            <th>Kategori Buku</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <div class="form-group">
+                    <button onclick="resetTransactions()">Reset</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!--Transaksi-->
+    
+    <!--footer-->
+       <footer>
+         <p>&copy; 2024 | PERPUSTAKAAN</p>
+       </footer>
+    <!--footer-->
+    
+    <script src="../Uas/scriptbr.js"></script>
+</body>
+</html>
